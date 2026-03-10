@@ -39,6 +39,7 @@ class Employe:
             self.voiture_service = None
             print("Voiture retiree de", self.prenom, self.nom)
 
+
 class Voiture:
     def __init__(self, matricule, annee, marque, kilometrage):
         self.matricule = matricule
@@ -62,3 +63,45 @@ class Voiture:
         else:
             print("Aucun employe associe.")
         print("-" * 40)
+
+
+employe1 = Employe("P12345", "Bouchelkia", "Zineddine")
+employe2 = Employe("P67890", "Ali", "Karim")
+employe3 = Employe("P54321", "Sara", "Amine")
+
+voiture1 = Voiture("ABC123", 2020, "Toyota", 50000)
+voiture2 = Voiture("XYZ456", 2021, "Honda", 30000)
+voiture3 = Voiture("LMN789", 2022, "Ford", 15000)
+
+print("\n=== Informations initiales des employes ===")
+employe1.afficher_informations()
+employe2.afficher_informations()
+employe3.afficher_informations()
+
+print("\n=== Informations initiales des voitures ===")
+voiture1.afficher_informations()
+voiture2.afficher_informations()
+voiture3.afficher_informations()
+
+print("\n=== Affectation des voitures ===")
+employe1.affecter_voiture(voiture1)
+employe2.affecter_voiture(voiture2)
+
+print("\n=== Informations apres affectation ===")
+employe1.afficher_informations()
+employe2.afficher_informations()
+employe3.afficher_informations()
+
+voiture1.afficher_informations()
+voiture2.afficher_informations()
+voiture3.afficher_informations()
+
+print("\n=== Retrait d'une voiture ===")
+employe1.retirer_voiture()
+
+print("\n=== Informations apres retrait ===")
+employe1.afficher_informations()
+voiture1.afficher_informations()
+
+print("\n=== Test d'affectation interdite ===")
+employe3.affecter_voiture(voiture2)
