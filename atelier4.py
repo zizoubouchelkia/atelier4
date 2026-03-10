@@ -38,3 +38,11 @@ class Employe:
             self.voiture_service.chauffeur = None
             self.voiture_service = None
             print("Voiture retiree de", self.prenom, self.nom)
+
+class Voiture:
+    def __init__(self, matricule, annee, marque, kilometrage):
+        self.matricule = matricule
+        self.annee = annee
+        self.marque = marque
+        self.kilometrage = kilometrage
+        self.chauffeur = None
