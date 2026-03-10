@@ -106,4 +106,3 @@ voiture1.afficher_informations()
 print("\n=== Test d'affectation interdite ===")
 employe3.affecter_voiture(voiture2)
 
-print("Fin du programme")
